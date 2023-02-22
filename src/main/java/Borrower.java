@@ -20,10 +20,11 @@ public class Borrower {
     }
 
     public void withdrawBook(String searchBookTitle, Library library) {
-        if (library.findBook(searchBookTitle) != null) {
-            this.addBook(library.findBook(searchBookTitle));
-            library.removeBook(library.findBook(searchBookTitle));
+        if (library.checkStock(searchBookTitle) != null) {
+            this.addBook(library.checkStock(searchBookTitle));
+            library.removeBook(library.checkStock(searchBookTitle));
         }
     }
+
 
 }

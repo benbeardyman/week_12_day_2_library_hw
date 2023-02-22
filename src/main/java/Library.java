@@ -26,7 +26,7 @@ public class Library {
         return this.capacity;
     }
 
-    public Book findBook(String searchBookTitle) {
+    public Book checkStock(String searchBookTitle) {
         for (Book book : this.collection) {
             if (book.getTitle().equals(searchBookTitle)) {
                 return book;

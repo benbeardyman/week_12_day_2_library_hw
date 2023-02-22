@@ -53,7 +53,7 @@ public class LibraryTest {
         library.addBook(book3);
         library.addBook(book4);
         String searchBookTitle = "Concrete Island";
-        Book foundBook = library.findBook(searchBookTitle);
+        Book foundBook = library.checkStock(searchBookTitle);
         assertEquals("Concrete Island", foundBook.getTitle());
     }
 
@@ -64,7 +64,7 @@ public class LibraryTest {
         library.addBook(book3);
         library.addBook(book4);
         String searchBookTitle = "Concrete Island";
-        library.removeBook(library.findBook(searchBookTitle));
+        library.removeBook(library.checkStock(searchBookTitle));
         assertEquals(3, library.getCollectionTotal());
     }
 
