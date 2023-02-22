@@ -6,12 +6,9 @@ public class Library {
     private ArrayList<Book> collection;
 
 
-    public Library() {
-        this.capacity = 4;
+    public Library(int capacity) {
+        this.capacity = capacity;
         this.collection = new ArrayList<>();
-        this.collection.add(new Book("American Gods", "Neil Gaiman", "Fantasy"));
-        this.collection.add(new Book("Concrete Island", "J.G. Ballard", "Dystopian"));
-        this.collection.add(new Book("Vernon God Little", "DBC Pierre", "Black Comedy"));
     }
 
 
